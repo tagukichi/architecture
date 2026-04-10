@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAISON ARC — 高級住宅建築</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="モバイルナビゲーション">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="閉じる">✕</button>
+    <a href="#about">About</a>
+    <a href="#works">Works</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Navigation -->
+  <header class="nav" id="mainNav" role="banner">
+    <a href="#" class="nav-logo">MAISON <span>ARC</span></a>
+    <nav aria-label="メインナビゲーション">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section data-section="HERO" class="hero">
+    <div class="hero-bg">
+      <img
+        class="hero-bg-image"
+        id="heroBgImage"
+        src="https://picsum.photos/1920/1080?grayscale&blur=1"
+        alt="高級住宅の外観"
+        loading="eager"
+      >
+      <div class="hero-bg-gradient"></div>
+    </div>
+
+    <div class="hero-deco-overlay"></div>
+
+    <!-- Art Deco corner decoration -->
+    <div class="hero-corner-deco" aria-hidden="true">
+      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="118" height="118" stroke="rgba(201,169,110,0.4)" stroke-width="1"/>
+        <rect x="12" y="12" width="96" height="96" stroke="rgba(201,169,110,0.2)" stroke-width="1"/>
+        <line x1="60" y1="1" x2="60" y2="12" stroke="rgba(201,169,110,0.6)" stroke-width="1"/>
+        <line x1="1" y1="60" x2="12" y2="60" stroke="rgba(201,169,110,0.6)" stroke-width="1"/>
+        <line x1="119" y1="60" x2="108" y2="60" stroke="rgba(201,169,110,0.6)" stroke-width="1"/>
+        <line x1="60" y1="119" x2="60" y2="108" stroke="rgba(201,169,110,0.6)" stroke-width="1"/>
+        <rect x="52" y="52" width="16" height="16" transform="rotate(45 60 60)" stroke="rgba(201,169,110,0.5)" stroke-width="1" fill="none"/>
+        <circle cx="60" cy="60" r="4" fill="rgba(201,169,110,0.6)"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="deco-line-h" aria-hidden="true"></span>
+        <span class="hero-eyebrow-text">Luxury Residential Architecture</span>
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        住まいは、<br><em>芸術である。</em>
+      </h1>
+      <p class="hero-desc reveal reveal-delay-2">
+        一邸一邸に、唯一無二の物語を宿す。<br>
+        MAISON ARCは、建築と芸術の境界に存在する<br>
+        高級住宅設計の専門家集団です。
+      </p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#works" class="btn-primary">
+          <span>実績を見る</span>
+        </a>
+        <a href="#contact" class="btn-text">
+          <span class="btn-text-arrow" aria-hidden="true"></span>
+          お問い合わせ
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span class="hero-scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section data-section="PHILOSOPHY" class="philosophy" id="about">
+    <div class="philosophy-bg-pattern" aria-hidden="true"></div>
+    <div class="philosophy-inner">
+      <div class="section-label reveal">
+        <span class="deco-line-h" aria-hidden="true"></span>
+        Our Philosophy
+        <span class="deco-line-h" aria-hidden="true"></span>
+      </div>
+      <blockquote class="philosophy-quote reveal reveal-delay-1">
+        "空間とは、光と影と沈黙が<br>
+        <em>対話する舞台</em>である"
+      </blockquote>
+      <div class="deco-divider reveal reveal-delay-2" aria-hidden="true">
+        <span class="deco-line-h"></span>
+        <span class="deco-diamond"></span>
+        <span class="deco-line-h"></span>
+      </div>
+      <p class="philosophy-body reveal reveal-delay-3">
+        私たちは、建築を機能の集合体としてではなく、<br>
+        人の感情と記憶を形にする行為として捉えています。<br>
+        素材の呼吸、光の軌跡、風の流れ—<br>
+        すべての要素が調和した時、住まいは完成します。
+      </p>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section data-section="WORKS" class="works" id="works">
+    <div class="works-header">
+      <div>
+        <div class="section-label reveal">
+          <span class="deco-line-h" aria-hidden="true"></span>
+          Selected Works
+        </div>
+        <h2 class="works-title reveal reveal-delay-1">
+          厳選された<br><em>施工事例</em>
+        </h2>
+      </div>
+      <a href="#" class="btn-text reveal reveal-delay-2">
+        <span class="btn-text-arrow" aria-hidden="true"></span>
+        全ての実績を見る
+      </a>
+    </div>
+
+    <div class="works-grid">
+      <article class="work-item reveal">
+        <img class="work-img" src="https://picsum.photos/800/600?grayscale&random=10" alt="Villa Shiro — 白砂邸" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-deco-border"></div>
+        <div class="work-info">
+          <p class="work-tag">Residential · 東京都港区</p>
+          <h3 class="work-name">Villa Shiro</h3>
+          <p class="work-year">2025</p>
+        </div>
+      </article>
+
+      <article class="work-item reveal reveal-delay-1">
+        <img class="work-img" src="https://picsum.photos/500/625?grayscale&random=20" alt="Maison Kuro — 黒曜邸" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-deco-border"></div>
+        <div class="work-info">
+          <p class="work-tag">Residential · 神奈川県鎌倉市</p>
+          <h3 class="work-name">Maison Kuro</h3>
+          <p class="work-year">2024</p>
+        </div>
+      </article>
+
+      <article class="work-item reveal reveal-delay-2">
+        <img class="work-img" src="https://picsum.photos/400/533?grayscale&random=30" alt="House of Water — 水鏡邸" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-deco-border"></div>
+        <div class="work-info">
+          <p class="work-tag">Residential · 長野県軽井沢</p>
+          <h3 class="work-name">House of Water</h3>
+          <p class="work-year">2024</p>
+        </div>
+      </article>
+
+      <article class="work-item reveal reveal-delay-3">
+        <img class="work-img" src="https://picsum.photos/900/506?grayscale&random=40" alt="Arc Noir — 弧影邸" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-deco-border"></div>
+        <div class="work-info">
+          <p class="work-tag">Residential · 京都府京都市</p>
+          <h3 class="work-name">Arc Noir</h3>
+          <p class="work-year">2023</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section data-section="STATS" class="stats">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-number">38<span class="stat-unit">年</span></div>
+        <div class="stat-label">設立からの歴史</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-number">240<span class="stat-unit">+</span></div>
+        <div class="stat-label">竣工実績</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-number">12<span class="stat-unit">冠</span></div>
+        <div class="stat-label">国際建築賞受賞</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-number">98<span class="stat-unit">%</span></div>
+        <div class="stat-label">顧客満足度</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section data-section="PROCESS" class="process" id="process">
+    <div class="process-header">
+      <div class="section-label reveal" style="justify-content: center;">
+        <span class="deco-line-h" aria-hidden="true"></span>
+        Our Process
+        <span class="deco-line-h" aria-hidden="true"></span>
+      </div>
+      <h2 class="process-title reveal reveal-delay-1">
+        建築の<em>四つの章</em>
+      </h2>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="process-number">01</div>
+        <h3 class="process-step-title">対話・ヒアリング</h3>
+        <p class="process-step-desc">
+          ライフスタイル、価値観、美意識—<br>
+          あなたの物語を深く聴く時間から<br>
+          すべては始まります。
+        </p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="process-number">02</div>
+        <h3 class="process-step-title">設計・構想</h3>
+        <p class="process-step-desc">
+          場所の記憶、光の動き、素材の声に<br>
+          耳を傾けながら、唯一無二の<br>
+          空間を構築します。
+        </p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="process-number">03</div>
+        <h3 class="process-step-title">施工・監理</h3>
+        <p class="process-step-desc">
+          最高峰の職人と最先端の技術が<br>
+          融合し、図面の世界が<br>
+          現実の空間となります。
+        </p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="process-number">04</div>
+        <h3 class="process-step-title">引渡し・その先へ</h3>
+        <p class="process-step-desc">
+          完成はゴールではありません。<br>
+          住まいとともに育ち続ける<br>
+          長期サポートを提供します。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section data-section="TESTIMONIAL" class="testimonial">
+    <div class="testimonial-bg"></div>
+    <div class="testimonial-deco" aria-hidden="true"></div>
+    <div class="testimonial-inner">
+      <span class="testimonial-quote-mark reveal" aria-hidden="true">"</span>
+      <blockquote class="testimonial-text reveal reveal-delay-1">
+        完成した瞬間、家族全員が言葉を失いました。<br>
+        これは単なる家ではない。私たちの人生を<br>
+        映し出した芸術作品です。
+      </blockquote>
+      <div class="deco-divider reveal reveal-delay-2" aria-hidden="true">
+        <span class="deco-line-h"></span>
+        <span class="deco-diamond"></span>
+        <span class="deco-line-h"></span>
+      </div>
+      <p class="testimonial-author reveal reveal-delay-3">田中 義雄 様</p>
+      <p class="testimonial-role reveal reveal-delay-4">Villa Shiro オーナー / 東京都港区</p>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section data-section="CONTACT" class="cta-section" id="contact">
+    <div class="cta-left">
+      <div class="section-label reveal">
+        <span class="deco-line-h" aria-hidden="true"></span>
+        Contact
+      </div>
+      <h2 class="cta-title reveal reveal-delay-1">
+        あなたの<em>夢の住まい</em>を、<br>
+        共に創りましょう
+      </h2>
+      <p class="cta-body reveal reveal-delay-2">
+        まずはお気軽にご相談ください。<br>
+        初回ヒアリングは無料にて承ります。<br>
+        ご要望やご予算など、どんな段階でも<br>
+        誠実にお応えします。
+      </p>
+      <a href="tel:03-0000-0000" class="btn-text reveal reveal-delay-3">
+        <span class="btn-text-arrow" aria-hidden="true"></span>
+        03-0000-0000
+      </a>
+    </div>
+
+    <div class="cta-right">
+      <form class="contact-form reveal reveal-delay-1" action="#" method="post" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">お名前</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="山田 太郎" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">メールアドレス</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="mail@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="subject">ご相談内容</label>
+          <input class="form-input" type="text" id="subject" name="subject" placeholder="新築住宅の設計について">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">詳細・ご要望</label>
+          <textarea class="form-input" id="message" name="message" placeholder="建設予定地・ご予算・理想のイメージなど、自由にお書きください"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="align-self: flex-start; cursor: pointer;">
+          <span>送信する</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">MAISON <span>ARC</span></div>
+        <p class="footer-tagline">
+          1986年創業。高級住宅設計の第一人者として、<br>
+          240棟を超える邸宅を手がけてきました。<br>
+          建築と芸術の交差点に、私たちは立ちます。
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">新築設計</a></li>
+          <li><a href="#">リノベーション</a></li>
+          <li><a href="#">インテリアデザイン</a></li>
+          <li><a href="#">ランドスケープ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Access</div>
+        <ul class="footer-links">
+          <li><a href="#">〒106-0031<br>東京都港区西麻布 1-2-3</a></li>
+          <li><a href="tel:03-0000-0000">03-0000-0000</a></li>
+          <li><a href="mailto:info@maison-arc.jp">info@maison-arc.jp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 MAISON ARC. All rights reserved.</p>
+      <ul class="footer-social">
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="Houzz">Houzz</a></li>
+        <li><a href="#" aria-label="Pinterest">Pinterest</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
