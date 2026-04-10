@@ -1351,14 +1351,14 @@ textarea.form-input {
   color: var(--color-gold);
 }
 
-.mobile-nav-close {
-  position: absolute;
-  top: clamp(1.5rem, 3vw, 2rem);
-  right: 5%;
-  background: none;
-  border: none;
-  color: var(--color-text);
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
+.nav-hamburger.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }

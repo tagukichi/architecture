@@ -56,22 +56,25 @@ window.addEventListener('scroll', () => {
 ========================================= */
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
-const mobileNavClose = document.getElementById('mobileNavClose');
 
-hamburger.addEventListener('click', () => {
-  mobileNav.classList.add('open');
-  document.body.style.overflow = 'hidden';
-});
-
-function closeMobileNav() {
-  mobileNav.classList.remove('open');
-  document.body.style.overflow = '';
+function toggleMobileNav() {
+  hamburger.classList.toggle('active');
+  mobileNav.classList.toggle('open');
+  if (mobileNav.classList.contains('open')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
 }
 
-mobileNavClose.addEventListener('click', closeMobileNav);
+hamburger.addEventListener('click', toggleMobileNav);
 
 mobileNav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', closeMobileNav);
+  link.addEventListener('click', () => {
+    if (mobileNav.classList.contains('open')) {
+      toggleMobileNav();
+    }
+  });
 });
 
 /* =========================================
@@ -104,3 +107,38 @@ heroBgImage.addEventListener('load', () => {
 if (heroBgImage.complete) {
   heroBgImage.classList.add('loaded');
 }
+
+/* =========================================
+   COUNT UP ANIMATION
+========================================= */
+const countUpElements = document.querySelectorAll('.count-up');
+
+const countUpObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+      const target = parseInt(entry.target.getAttribute('data-target'));
+      let count = 0;
+      const duration = 2000; // ms
+      const increment = target / (duration / 16); 
+      
+      entry.target.classList.add('counted');
+      
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          entry.target.innerText = Math.ceil(count);
+          requestAnimationFrame(updateCount);
+        } else {
+          entry.target.innerText = target;
+        }
+      };
+      
+      updateCount();
+      countUpObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.5
+});
+
+countUpElements.forEach(el => countUpObserver.observe(el));
