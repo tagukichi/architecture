@@ -142,3 +142,58 @@ const countUpObserver = new IntersectionObserver((entries) => {
 });
 
 countUpElements.forEach(el => countUpObserver.observe(el));
+
+/* =========================================
+   TESTIMONIAL SLIDER
+========================================= */
+const testimonialTrack = document.getElementById('testimonialTrack');
+
+if (testimonialTrack) {
+  const slides = Array.from(testimonialTrack.children);
+  const dotsContainer = document.getElementById('testimonialDots');
+  const prevBtn = document.getElementById('testimonialPrev');
+  const nextBtn = document.getElementById('testimonialNext');
+  const slider = document.getElementById('testimonialSlider');
+  let current = 0;
+  let autoTimer;
+
+  // Build navigation dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `${i + 1}件目のお客様の声へ`);
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+  const dots = Array.from(dotsContainer.children);
+
+  function goToSlide(i) {
+    current = (i + slides.length) % slides.length;
+    testimonialTrack.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((dot, di) => dot.classList.toggle('active', di === current));
+  }
+
+  function startAuto() {
+    autoTimer = setInterval(() => goToSlide(current + 1), 6000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoTimer);
+  }
+
+  prevBtn.addEventListener('click', () => goToSlide(current - 1));
+  nextBtn.addEventListener('click', () => goToSlide(current + 1));
+
+  // Pause autoplay on hover
+  slider.addEventListener('mouseenter', stopAuto);
+  slider.addEventListener('mouseleave', startAuto);
+
+  // Only autoplay when more than one slide exists
+  if (slides.length > 1) {
+    startAuto();
+  } else {
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+  }
+}
