@@ -1324,7 +1324,8 @@ textarea.form-input {
   line-height: 1.9;
   letter-spacing: 0.06em;
   color: var(--color-text-dim);
-  max-width: 280px;
+  max-width: 26em;
+  line-break: strict;
 }
 
 .footer-col-title {
