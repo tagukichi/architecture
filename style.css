@@ -203,7 +203,7 @@ a {
 
 .nav-links li a {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -232,7 +232,7 @@ a {
 }
 
 .nav-cta {
-  font-size: 0.65rem !important;
+  font-size: 0.78rem !important;
   font-weight: 500 !important;
   letter-spacing: 0.2em !important;
   text-transform: uppercase !important;
@@ -350,7 +350,7 @@ a {
 
 .hero-eyebrow-text {
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.35em;
   text-transform: uppercase;
@@ -375,7 +375,7 @@ a {
 
 .hero-desc {
   font-family: var(--font-sans);
-  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  font-size: clamp(0.85rem, 1.3vw, 1rem);
   font-weight: 300;
   line-height: 2;
   letter-spacing: 0.08em;
@@ -393,7 +393,7 @@ a {
 .btn-primary {
   display: inline-block;
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -428,7 +428,7 @@ a {
   align-items: center;
   gap: 0.75rem;
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -542,7 +542,7 @@ a {
   align-items: center;
   gap: 1rem;
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.35em;
   text-transform: uppercase;
@@ -567,7 +567,7 @@ a {
 
 .philosophy-body {
   font-family: var(--font-sans);
-  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
   font-weight: 300;
   line-height: 2.2;
   letter-spacing: 0.06em;
@@ -672,7 +672,7 @@ a {
 
 .service-desc {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   font-weight: 300;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -689,7 +689,7 @@ a {
 
 .service-meta li {
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   color: var(--color-gold);
@@ -809,7 +809,7 @@ a {
 
 .work-tag {
   font-family: var(--font-sans);
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -827,7 +827,7 @@ a {
 
 .work-year {
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   font-weight: 300;
   letter-spacing: 0.15em;
   color: var(--color-text-dim);
@@ -988,7 +988,7 @@ a {
 
 .process-step-desc {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.88rem;
   font-weight: 300;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -1106,7 +1106,7 @@ a {
 
 .cta-body {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   font-weight: 300;
   line-height: 2.2;
   letter-spacing: 0.06em;
@@ -1211,7 +1211,7 @@ textarea.form-input {
 
 .footer-tagline {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.82rem;
   font-weight: 300;
   line-height: 1.9;
   letter-spacing: 0.06em;
@@ -1221,7 +1221,7 @@ textarea.form-input {
 
 .footer-col-title {
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -1238,7 +1238,7 @@ textarea.form-input {
 
 .footer-links li a {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 300;
   letter-spacing: 0.05em;
   color: var(--color-text-dim);
@@ -1251,7 +1251,7 @@ textarea.form-input {
 
 .footer-company li {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 300;
   letter-spacing: 0.05em;
   line-height: 1.7;
@@ -1269,7 +1269,7 @@ textarea.form-input {
 
 .footer-copy {
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: 0.1em;
   color: var(--color-text-dim);
