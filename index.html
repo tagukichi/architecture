@@ -26,7 +26,7 @@
 
   <!-- Navigation -->
   <header class="nav" id="mainNav" role="banner">
-    <a href="#" class="nav-logo">KILA <span>STAR</span></a>
+    <a href="#" class="nav-logo">株式会社KILA <span>STAR</span></a>
     <nav aria-label="メインナビゲーション">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -56,20 +56,6 @@
     </div>
 
     <div class="hero-deco-overlay"></div>
-
-    <!-- Art Deco corner decoration -->
-    <div class="hero-corner-deco" aria-hidden="true">
-      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="118" height="118" stroke="rgba(201,169,110,0.4)" stroke-width="1"/>
-        <rect x="12" y="12" width="96" height="96" stroke="rgba(201,169,110,0.2)" stroke-width="1"/>
-        <line x1="60" y1="1" x2="60" y2="12" stroke="rgba(201,169,110,0.6)" stroke-width="1"/>
-        <line x1="1" y1="60" x2="12" y2="60" stroke="rgba(201,169,110,0.6)" stroke-width="1"/>
-        <line x1="119" y1="60" x2="108" y2="60" stroke="rgba(201,169,110,0.6)" stroke-width="1"/>
-        <line x1="60" y1="119" x2="60" y2="108" stroke="rgba(201,169,110,0.6)" stroke-width="1"/>
-        <rect x="52" y="52" width="16" height="16" transform="rotate(45 60 60)" stroke="rgba(201,169,110,0.5)" stroke-width="1" fill="none"/>
-        <circle cx="60" cy="60" r="4" fill="rgba(201,169,110,0.6)"/>
-      </svg>
-    </div>
 
     <div class="hero-content">
       <div class="hero-eyebrow reveal">
@@ -232,21 +218,24 @@
 
   <!-- CTA / Contact -->
   <section data-section="CONTACT" class="cta-section" id="contact">
-    <div class="cta-left">
-      <div class="section-label reveal">
+    <div class="cta-inner">
+      <div class="section-label reveal" style="justify-content: center;">
         <span class="deco-line-h" aria-hidden="true"></span>
         Contact
+        <span class="deco-line-h" aria-hidden="true"></span>
       </div>
       <h2 class="cta-title reveal reveal-delay-1">
         不動産のご相談を、<br>
         <em>お聞かせください</em>
       </h2>
       <p class="cta-body reveal reveal-delay-2">
-        買取・売却・建築活用など、<br>
-        不動産に関するご相談を承ります。<br>
+        買取・売却・建築活用など、不動産に関するご相談を承ります。<br>
         一都三県を中心に対応しております。<br>
-        まずはお気軽にお問い合わせください。
+        下記フォームよりお気軽にお問い合わせください。
       </p>
+      <a href="#" class="btn-primary cta-form-btn reveal reveal-delay-3" target="_blank" rel="noopener">
+        <span>お問い合わせはこちら</span>
+      </a>
       <div class="cta-contact reveal reveal-delay-3">
         <a href="tel:08065235282" class="btn-text">
           <span class="btn-text-arrow" aria-hidden="true"></span>
@@ -257,32 +246,6 @@
           kita@kila-corp.com
         </a>
       </div>
-    </div>
-
-    <div class="cta-right">
-      <form class="contact-form reveal reveal-delay-1" action="#" method="post" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="name">お名前</label>
-            <input class="form-input" type="text" id="name" name="name" placeholder="山田 太郎" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="email">メールアドレス</label>
-            <input class="form-input" type="email" id="email" name="email" placeholder="mail@example.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="subject">ご相談内容</label>
-          <input class="form-input" type="text" id="subject" name="subject" placeholder="土地の買取・売却について">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="message">詳細・ご要望</label>
-          <textarea class="form-input" id="message" name="message" placeholder="物件の所在地・面積・最寄り駅・ご希望条件など、自由にお書きください"></textarea>
-        </div>
-        <button type="submit" class="btn-primary" style="align-self: flex-start; cursor: pointer;">
-          <span>送信する</span>
-        </button>
-      </form>
     </div>
   </section>
 
