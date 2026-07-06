@@ -5,10 +5,14 @@
  * @package KILA_STAR
  */
 
-$kila_tel      = kila_star_get_tel();
-$kila_tel_href = kila_star_get_tel_href();
-$kila_email    = kila_star_get_email();
-$kila_year     = function_exists( 'wp_date' ) ? wp_date( 'Y' ) : date_i18n( 'Y' );
+$kila_tel       = kila_star_get_tel();
+$kila_tel_href  = kila_star_get_tel_href();
+$kila_email     = kila_star_get_email();
+$kila_year      = function_exists( 'wp_date' ) ? wp_date( 'Y' ) : date_i18n( 'Y' );
+
+// 未入力の項目は表示しない
+$kila_has_tel   = ( '' !== trim( $kila_tel ) && '' !== $kila_tel_href );
+$kila_has_email = ( '' !== trim( $kila_email ) );
 ?>
 
 	<!-- Footer -->
@@ -46,8 +50,12 @@ $kila_year     = function_exists( 'wp_date' ) ? wp_date( 'Y' ) : date_i18n( 'Y' 
 					<li>株式会社KILA STAR</li>
 					<li>代表取締役　喜多 裕輔</li>
 					<li>〒214-0012<br>神奈川県川崎市多摩区中野島6-26-1<br>フジヨシハイム205</li>
+					<?php if ( $kila_has_tel ) : ?>
 					<li><a href="tel:<?php echo esc_attr( $kila_tel_href ); ?>">Mobile：<?php echo esc_html( $kila_tel ); ?></a></li>
+					<?php endif; ?>
+					<?php if ( $kila_has_email ) : ?>
 					<li><a href="mailto:<?php echo esc_attr( $kila_email ); ?>"><?php echo esc_html( $kila_email ); ?></a></li>
+					<?php endif; ?>
 				</ul>
 			</div>
 		</div>

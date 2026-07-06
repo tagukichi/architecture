@@ -147,7 +147,7 @@ function kila_star_customize_register( $wp_customize ) {
 		'kila_star_form_url',
 		array(
 			'label'       => __( 'お問い合わせボタンのURL（Googleフォーム等）', 'kila-star' ),
-			'description' => __( '空欄または「#」でリンク無効になります。', 'kila-star' ),
+			'description' => __( '空欄または「#」の場合、「お問い合わせはこちら」ボタンは表示されません。', 'kila-star' ),
 			'section'     => 'kila_star_contact',
 			'type'        => 'text',
 		)
@@ -165,9 +165,10 @@ function kila_star_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'kila_star_tel',
 		array(
-			'label'   => __( '電話番号', 'kila-star' ),
-			'section' => 'kila_star_contact',
-			'type'    => 'text',
+			'label'       => __( '電話番号', 'kila-star' ),
+			'description' => __( '空欄にすると電話番号の項目は表示されません。', 'kila-star' ),
+			'section'     => 'kila_star_contact',
+			'type'        => 'text',
 		)
 	);
 
@@ -183,9 +184,10 @@ function kila_star_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'kila_star_email',
 		array(
-			'label'   => __( 'メールアドレス', 'kila-star' ),
-			'section' => 'kila_star_contact',
-			'type'    => 'email',
+			'label'       => __( 'メールアドレス', 'kila-star' ),
+			'description' => __( '空欄にするとメールアドレスの項目は表示されません。', 'kila-star' ),
+			'section'     => 'kila_star_contact',
+			'type'        => 'email',
 		)
 	);
 }

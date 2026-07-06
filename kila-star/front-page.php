@@ -7,10 +7,15 @@
 
 get_header();
 
-$kila_form_url = kila_star_get_form_url();
-$kila_tel      = kila_star_get_tel();
-$kila_tel_href = kila_star_get_tel_href();
-$kila_email    = kila_star_get_email();
+$kila_form_url  = kila_star_get_form_url();
+$kila_tel       = kila_star_get_tel();
+$kila_tel_href  = kila_star_get_tel_href();
+$kila_email     = kila_star_get_email();
+
+// 未入力の項目は表示しない
+$kila_has_form  = ( '' !== $kila_form_url && '#' !== $kila_form_url );
+$kila_has_tel   = ( '' !== trim( $kila_tel ) && '' !== $kila_tel_href );
+$kila_has_email = ( '' !== trim( $kila_email ) );
 ?>
 
 	<!-- Hero -->
@@ -336,19 +341,27 @@ $kila_email    = kila_star_get_email();
 				一都三県を中心に対応しております。<br>
 				下記フォームよりお気軽にお問い合わせください。
 			</p>
+			<?php if ( $kila_has_form ) : ?>
 			<a href="<?php echo esc_url( $kila_form_url ); ?>" class="btn-primary cta-form-btn reveal reveal-delay-3" target="_blank" rel="noopener">
 				<span>お問い合わせはこちら</span>
 			</a>
+			<?php endif; ?>
+			<?php if ( $kila_has_tel || $kila_has_email ) : ?>
 			<div class="cta-contact reveal reveal-delay-3">
+				<?php if ( $kila_has_tel ) : ?>
 				<a href="tel:<?php echo esc_attr( $kila_tel_href ); ?>" class="btn-text">
 					<span class="btn-text-arrow" aria-hidden="true"></span>
 					<?php echo esc_html( $kila_tel ); ?>
 				</a>
+				<?php endif; ?>
+				<?php if ( $kila_has_email ) : ?>
 				<a href="mailto:<?php echo esc_attr( $kila_email ); ?>" class="btn-text">
 					<span class="btn-text-arrow" aria-hidden="true"></span>
 					<?php echo esc_html( $kila_email ); ?>
 				</a>
+				<?php endif; ?>
 			</div>
+			<?php endif; ?>
 		</div>
 	</section>
 
